@@ -4,15 +4,15 @@ import { contactType } from "../types";
 import React from "react";
 
 type contactInfoProps = {
-  contact: contactType,
-}
+  contact: contactType;
+};
 
-const ContactInfo:FC<contactInfoProps> = ({ contact }) => {
+const ContactInfo: FC<contactInfoProps> = ({ contact }) => {
   const { name, email, address } = contact || {};
   const { street, suite, city, zipcode } = address || {};
 
   if (!contact) {
-    return <Heading tag="h3" text="Empty contact" />
+    return <Heading tag="h3" text="Empty contact" />;
   }
 
   return (
@@ -28,6 +28,6 @@ const ContactInfo:FC<contactInfoProps> = ({ contact }) => {
       </div>
     </>
   );
-}
+};
 
 export default ContactInfo;

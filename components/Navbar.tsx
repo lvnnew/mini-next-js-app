@@ -21,7 +21,9 @@ const Navbar: FC = () => {
       <div className={styles.links}>
         {navigation.map(({ id, title, path }) => (
           <Link key={id} href={path}>
-            <a className={pathname === path ? styles.active : undefined}>{title}</a>
+            <a className={pathname === path ? styles.active : undefined}>
+              {title}
+            </a>
           </Link>
         ))}
       </div>
